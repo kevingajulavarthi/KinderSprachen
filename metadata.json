@@ -1,0 +1,7 @@
+{
+  "name": "KinderSprachen",
+  "description": "Fun German learning platform for young children aged 4-7 with Leo the Lion, interactive lessons, games, stories, alphabet, and pronunciation.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

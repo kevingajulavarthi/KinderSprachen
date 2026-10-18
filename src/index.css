@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-fredoka: "Fredoka", cursive, sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+
+  --color-kinder-blue: #55B8FF;
+  --color-kinder-yellow: #FFD966;
+  --color-kinder-green: #75E6A6;
+  --color-kinder-pink: #FF8F9C;
+  --color-kinder-purple: #B7A4FF;
+  --color-kinder-bg: #FFFDF5;
+  --color-kinder-text: #26354A;
+}
+
+body {
+  font-family: var(--font-nunito);
+  background-color: #FFFDF5;
+  color: #26354A;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-fredoka);
+}
+
+/* Playful custom child-friendly scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF5DD;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFD966;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #55B8FF;
+}
+
+@keyframes gentle-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-gentle-bounce {
+  animation: gentle-bounce 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.animate-wiggle {
+  animation: wiggle 1.5s ease-in-out infinite;
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  70% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop {
+  animation: pop-in 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
